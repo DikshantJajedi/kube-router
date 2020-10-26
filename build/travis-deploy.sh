@@ -3,6 +3,7 @@ set -o errexit
 set -o pipefail
 
 GOARCHES=(amd64 arm64 arm s390x ppc64le)
+GOARCH=arm64
 echo "hii"
 echo $(GOARCH)
 echo "llll"
