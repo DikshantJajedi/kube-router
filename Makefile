@@ -48,6 +48,7 @@ all: test kube-router container ## Default target. Runs tests, builds binaries a
 kube-router:
 ifeq "$(BUILD_IN_DOCKER)" "true"
 	@echo Starting kube-router binary build.
+	@echo $(GOARCH)
 	$(DOCKER) run -v $(PWD):/go/src/github.com/cloudnativelabs/kube-router -w /go/src/github.com/cloudnativelabs/kube-router $(DOCKER_BUILD_IMAGE) \
 	    sh -c ' \
 	    GOARCH=$(GOARCH) CGO_ENABLED=0 go build -mod vendor \
