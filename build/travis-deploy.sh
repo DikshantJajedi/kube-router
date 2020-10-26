@@ -3,10 +3,7 @@ set -o errexit
 set -o pipefail
 
 GOARCHES=(amd64 arm64 arm s390x ppc64le)
-GOARCH=arm64
-echo "hii"
-echo $(GOARCH)
-echo "llll"
+
 # Pull Request image tag format: PR00
 if [ "${TRAVIS_EVENT_TYPE}" = "pull_request" ]; then
     PR_USER=$(echo "${TRAVIS_PULL_REQUEST_SLUG}" | sed -e 's/\/.*//')
