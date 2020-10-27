@@ -1,5 +1,5 @@
 NAME?=kube-router
-GOARCH?=$(shell go env GOARCH)
+GOARCH?=arm64
 DEV_SUFFIX?=-git
 OSX=$(filter Darwin,$(shell uname))
 BUILD_DATE?=$(shell date +%Y-%m-%dT%H:%M:%S%z)
